@@ -48,25 +48,28 @@ A preprocessing pipeline is defined using ColumnTransformer to handle categorica
 ## Model Building and Evaluation:
 ### Linear Regression: 
 A Linear Regression model is built and evaluated using MAE, RMSE, and R². The notebook also visualizes the actual vs. predicted values, residuals, and feature coefficients.
+Linear Regression: As a foundational model, Linear Regression provided a baseline for performance. its performance was modest, achieving an R² score of approximately 0.46. 
+The actual vs. predicted plot showed a tendency for the model to underpredict higher market values and overpredict lower ones, and the residuals exhibited a pattern, suggesting that the linear assumptions were not fully met.
+![result linear](https://github.com/user-attachments/assets/0c9f3414-e5f7-4329-9431-707b7bdd9bbf)
+
 
 ### Random Forest: 
-A Random Forest Regressor model is built and evaluated using the same metrics. Feature importances are also visualized.
+A Random Forest performed a significant improvement over Linear Regression. 
+With an R² score of around 0.72, the Random Forest model explained larger portion of the variance in player market values. 
+The feature importance analysis revealed key drivers, with contract_years_left, max_val, avg_val, and national_team_players appearing as highly influential features. 
+
+![rf_result](https://github.com/user-attachments/assets/47296521-548f-447f-95b3-3281a96abc73)
 
 
+The actual vs. predicted plot showed a better fit, particularly for values within the common range, although predicting extreme market values remains a problem.
 
-The evaluation metrics for the Random Forest model indicate a decent overall performance in predicting football player market values. 
-  With a Mean Absolute Error (MAE) of approximately 0.476, the model’s predictions deviate only moderately from actual values on average, suggesting consistent accuracy. 
-  The Root Mean Squared Error (RMSE) of 0.636 reflects a relatively low level of prediction error magnitude, reinforcing the model's stability. Most notably, 
-  the R² score of 0.837 implies that the model accounts for nearly 84% of the variance in the target variable, demonstrating a strong explanatory power. 
-  
-![rf_result](https://github.com/user-attachments/assets/b5b4edb5-f782-43e1-b8a2-0c62f44b2aca)
-Lookign at actual vs predicted the  values , we can closely track the actual market values. 
-
-Taken together, these results suggest that the Random Forest model provides an improvement insights in the dataset. 
 
 ### XGBoost: 
-An XGBoost Regressor model is built and evaluated. Feature importances are visualized as well.
+ further improved predictive performance, achieving the highest R² score among the traditional machine learning models at approximately 0.75. Similar to Random Forest, the feature importance reinforced the significance of contract duration and historical market value/transfer fees. The actual vs. predicted plot showed the best alignment with the actual values across the range, and the residuals were more tightly clustered around zero, indicating more accurate predictions.
+![xgb_result](https://github.com/user-attachments/assets/444e52f5-976d-434f-bb88-6b6a483a04e4)
 
+
+ 
 ### Deep Neural Network (DNN): 
 Two versions of a Sequential Keras model are built with different architectures and training parameters (including Batch Normalization, Dropout, 
 L2 regularization, and learning rate reduction). Both DNNs are trained and evaluated. Training history (loss and MAE), actual vs. predicted values, residuals, and error distributions are visualized for the DNN models.
