@@ -12,7 +12,7 @@ we start with understanding the dataset of players. as the result
 
 ![download](https://github.com/user-attachments/assets/b433467f-a863-4c87-8e7c-2bead0edcfdd)
 
-## Market value
+## Market value of players
 ### Age 
 we look a bit of the age and we notice the market value is on general tilted up towards younger players group ( the 20s) with a number of players that goes to the extreme. This is assumed as star players/ outliers.  
 
