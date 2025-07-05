@@ -17,6 +17,11 @@ we look a bit of the age and we notice the market value is on general tilted up 
 
 ![age market value](https://github.com/user-attachments/assets/177da79e-e53f-4b86-af90-7a488e7ffe0e)
 
+Overtime the market value also increased - due to increased in popularity + inlfation. 
+
+![marketvalue_position](https://github.com/user-attachments/assets/1543d376-478d-4472-baea-882e80b10792)
+
+
 Goals scored seems to be also indicator of market value but for attacked
 
 ![goal_market value](https://github.com/user-attachments/assets/a5d1b08d-92e5-446b-87c1-d8a2ea7bd9fc)
