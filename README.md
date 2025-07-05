@@ -10,9 +10,22 @@ we start with understanding the dataset of players. as the result
 ![download](https://github.com/user-attachments/assets/b433467f-a863-4c87-8e7c-2bead0edcfdd)
 
 ## Market value
+we look a bit of the age and we notice the market value is on general tilted up towards younger players with a number of players that goes to the extreme. This is assumed as star players 
+
+![age market value](https://github.com/user-attachments/assets/177da79e-e53f-4b86-af90-7a488e7ffe0e)
+
+Goals scored seems to be also indicator of market value but for attacked
+
+![goal_market value](https://github.com/user-attachments/assets/a5d1b08d-92e5-446b-87c1-d8a2ea7bd9fc)
 
 
 # Approaches
+Based on the Eda and our level of knowledge of datascience and knowledge in football we decided to go: 
+Basic:
+- Try to remove star players as our outlier by not having players id.
+- generate different models and Use same features - and observed their valuable features (except DNN)
+- Generate model that is as accurate as possible with as little as  over/underfitting
+
 ## Data Loading and Preparation: 
 It starts by mounting Google Drive and loading several CSV files containing data about players, clubs, games, transfers, and more.
 
