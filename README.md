@@ -4,6 +4,10 @@ This repo is in essence, another version of JATJ's team approach to the model bu
 
 # EDA
 
+# basic analysis - headcount
+we start with understanding the dataset of players. as the result 
+![download](https://github.com/user-attachments/assets/b433467f-a863-4c87-8e7c-2bead0edcfdd)
+
 
 # Approaches
 ## Data Loading and Preparation: 
