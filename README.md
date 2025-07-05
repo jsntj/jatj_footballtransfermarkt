@@ -83,5 +83,13 @@ The actual vs. predicted plot showed a better fit, particularly for values withi
 
  
 ### Deep Neural Network (DNN): 
-Two versions of a Sequential Keras model are built with different architectures and training parameters (including Batch Normalization, Dropout, 
-L2 regularization, and learning rate reduction). Both DNNs are trained and evaluated. Training history (loss and MAE), actual vs. predicted values, residuals, and error distributions are visualized for the DNN models.
+Two versions of a Sequential Keras model were explored. DNN V1, a simpler architecture, yielded performance comparable to Linear Regression (R² ~ 0.46). 
+![dnn v1 result](https://github.com/user-attachments/assets/d51b8a97-2d10-4bf0-a070-949b0c91b52b)
+
+
+DNN V2, with additional layers, Batch Normalization, Dropout, and a learning rate scheduler, showed improved performance (R² ~ 0.67) compared to V1 and Linear Regression, but did not surpass the performance of the tree-based models (Random Forest and XGBoost) in this implementation. 
+
+![dnnv2result](https://github.com/user-attachments/assets/2744cf40-eced-4f6d-a2d7-64158647d467)
+
+
+The training history plots for the DNNs provided insight into the learning process, showing how the loss and MAE decreased over epochs. The actual vs. predicted and residual plots for the DNNs indicated their ability to capture some non-linearities, with DNN V2 showing a better fit than V1. However, they are still under performed against xgb and rf. 
