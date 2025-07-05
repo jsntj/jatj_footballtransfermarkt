@@ -41,7 +41,10 @@ fundamental as possible. Hence, we focused on these aspect while building :
 - Get : different techniques to improved the model. RandomSearch.
 
 ## Data Loading and Preparation: 
-To ensure everyone that approaches the notebook- we stored the dataset from kaggle in personal google drive folder and load them directly into the colab notebook. This process could be replaced with any
+To ensure everyone that approaches the notebook- we stored the dataset from kaggle in personal google drive folder and load them directly into the colab notebook. This process could be replaced with any loading process.
+The script will work as long the dataset remains
+
+
 ### Data Splitting: 
 
 The data is split into training and testing sets. 
