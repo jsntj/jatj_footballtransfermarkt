@@ -24,25 +24,37 @@ Goals scored seems to be also indicator of market value but for attacked
 
 # Approaches
 Based on the Eda and our level of knowledge of datascience and knowledge in football we decided to go as
-fundamental as possible. Hence, we foucs on these 3 aspect while building :
-- Try to remove star players as our outlier by not having players id.
-- generate different models and Use same features - and observed their valuable features (except DNN)
-- Generate model that is as accurate as possible with as little as  over/underfitting
+fundamental as possible. Hence, we focused on these 3 aspect while building :
+- Try avoid any compromiesed dataset for modelling - for e.g. data leakeage due to features building or players' outliers
+- Generate different models and Use same features - and observed their valuable features (except DNN). 
+- Generate model that is as accurate as possible with as little as over/underfitting
+- Get : different techniques to improved the model. RandomSearch.
 
 ## Data Loading and Preparation: 
 To ensure everyone that approaches the notebook- we stored the dataset from kaggle in personal google drive folder and load them directly into the colab notebook. This process could be replaced with any
-
-## Feature Engineering:
-
-A comprehensive set of features is engineered by merging the different dataframes. These features include player attributes (age, height, position, foot), performance metrics (goals, assists, cards per 90 minutes, appearances), club performance (win rate, goals scored/conceded), transfer history (transfer count, fees), contract details, and flags for top leagues and foreign players. The target variable, market value, is also log-transformed to handle outliers.
-
-## Data Splitting: 
+### Data Splitting: 
 
 The data is split into training and testing sets. 
 
+## Feature Engineering:
+
+A comprehensive set of features is engineered by merging the different dataframes. As one can see the datasets have Ids that could be merged/unioned. 
+
+![kaggle](https://github.com/user-attachments/assets/f19c095f-e303-4ece-92f7-d45ab340bac9)
+
+We decided to build features based on **The Players** and use market_value as the target. 
+
+Deciding features were taken during our EDA. We understand **basic features** like age, height, position, foot are just low-hanging fruit so we added them. 
+Performance metrics (goals, assists, cards per 90 minutes, appearances), generally should be tilted towards attacker but we keep goal in hope that we could improved it.
+club performance (win rate, goals scored/conceded), 
+transfer history (transfer count, fees), 
+Other features like contract details, top leagues and foreign players. 
+we also considered log-transformed to handle outlier for the market_value to handle outlier. 
+
+
 ## Preprocessing Pipeline: 
 
-A preprocessing pipeline is defined using ColumnTransformer to handle categorical features (one-hot encoding) and numerical features (standard scaling).
+A preprocessing pipeline is defined using ColumnTransformer to handle categorical features (one-hot encoding) and numerical features (standard scaling). it was built standard. 
 
 
 ## Model Building and Evaluation:
