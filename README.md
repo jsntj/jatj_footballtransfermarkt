@@ -107,7 +107,7 @@ DNN V2, with additional layers, Batch Normalization, Dropout, and a learning rat
 
 The training history plots for the DNNs provided insight into the learning process, showing how the loss and MAE decreased over epochs. The actual vs. predicted and residual plots for the DNNs indicated their ability to capture some non-linearities, with DNN V2 showing a better fit than V1. However, they are still under performed against xgb and rf. 
 
-## DNN_v2 hyperparameter tuning
+## DNN_v2 after hyperparameter tuning (optional)
 
 To improve the performance of the initial DNN V2 model, we attempted hyperparameter tuning whioch was conducted using Keras Tuner's RandomSearch. 
 
