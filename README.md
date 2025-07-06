@@ -101,7 +101,7 @@ Two versions of a Sequential Keras model were explored. DNN V1, a simpler archit
 
 
 DNN V2, with additional layers, Batch Normalization, Dropout, and a learning rate scheduler, showed improved performance (R² ~ 0.67) compared to V1 and Linear Regression, but did not surpass the performance of the tree-based models (Random Forest and XGBoost) in this implementation. 
-
+![dnnv2t_result](https://github.com/user-attachments/assets/e040810b-beba-44de-b912-62a8d2238d37)
 ![dnnv2result](https://github.com/user-attachments/assets/2744cf40-eced-4f6d-a2d7-64158647d467)
 
 
