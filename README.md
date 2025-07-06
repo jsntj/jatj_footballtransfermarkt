@@ -106,3 +106,23 @@ DNN V2, with additional layers, Batch Normalization, Dropout, and a learning rat
 
 
 The training history plots for the DNNs provided insight into the learning process, showing how the loss and MAE decreased over epochs. The actual vs. predicted and residual plots for the DNNs indicated their ability to capture some non-linearities, with DNN V2 showing a better fit than V1. However, they are still under performed against xgb and rf. 
+
+## DNN_v2 hyperparameter tuning
+
+To improve the performance of the initial DNN V2 model, we attempted hyperparameter tuning whioch was conducted using Keras Tuner's RandomSearch. 
+
+The objective of the tuning process was to minimize the validation loss (val_loss) during training. The tuning process resulted in an improved DNN V2 model. Upon evaluation on the test set (X_test_processed), the tuned model achieved an R² score of 0.6979, a Mean Absolute Error (MAE) of 0.6671, and a Root Mean Squared Error (RMSE) of 0.8683.
+
+### Overall result / conclusion
+Random forest and XGb remains the top model for this dataset. After extensive Randomsearch the DNN_v2 still perform a disappointing below the XGB and RF. 
+
+![model-result](https://github.com/user-attachments/assets/f1fd2d32-afba-417e-9973-2649799d1dcc)
+
+
+## Hindsight
+There could be improvement such as
+- Hyperparameter tuning all the models
+- Building more effective features after
+- Inject additional players performance dataset from different sources
+- Inject additional players or club popularity based on social media
+
