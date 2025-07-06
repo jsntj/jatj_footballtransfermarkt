@@ -98,6 +98,7 @@ The actual vs. predicted plot showed a better fit, particularly for values withi
 ### Deep Neural Network (DNN): 
 Two versions of a Sequential Keras model were explored. DNN V1, a simpler architecture, yielded performance comparable to Linear Regression (R² ~ 0.46). 
 ![dnn v1 result](https://github.com/user-attachments/assets/d51b8a97-2d10-4bf0-a070-949b0c91b52b)
+![dnn v1 result2](https://github.com/user-attachments/assets/78c61bcc-1ecd-4162-935b-a2a4f9b9632e)
 
 
 DNN V2, with additional layers, Batch Normalization, Dropout, and a learning rate scheduler, showed improved performance (R² ~ 0.67) compared to V1 and Linear Regression, but did not surpass the performance of the tree-based models (Random Forest and XGBoost) in this implementation. 
