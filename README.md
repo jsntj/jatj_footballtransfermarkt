@@ -57,13 +57,47 @@ A comprehensive set of features is engineered by merging the different dataframe
 
 We decided to build features based on **The Players** and use market_value as the target. 
 
-Deciding features were taken during our EDA. We understand **basic features** like age, height, position, foot are just low-hanging fruit so we added them. 
-Performance metrics (goals, assists, cards per 90 minutes, appearances), generally should be tilted towards attacker but we keep goal in hope that we could improved it.
-club performance (win rate, goals scored/conceded), 
-transfer history (transfer count, fees), 
-Other features like contract details, top leagues and foreign players. 
-we also considered log-transformed to handle outlier for the market_value to handle outlier. 
+Player Demographics & Contract
+- age: Player's age calculated from date of birth.
+- contract_years_left: Years remaining on the player's contract.
+- height_in_cm: Player's height in centimeters.
+- is_foreigner: Whether the player’s citizenship differs from the club’s country.
+- is_top_league: Whether the player’s club competes in a top-tier league (e.g., L1, GB1, ES1, IT1, FR1).
 
+Player Performance (Aggregated)
+goals_per_90: Goals scored per 90 minutes played.
+assists_per_90: Assists per 90 minutes played.
+contrib_per_90: Combined goals and assists per 90 minutes.
+cards_per_90: Yellow and red cards per 90 minutes.
+appearances: Total number of games played.
+
+Recent Form (Last 10 Appearances)
+recent_contrib: Total goals + assists in the last 10 matches.
+
+Transfer History
+transfer_count: Number of transfers the player has had.
+max_fee: Highest transfer fee paid for the player.
+total_fees: Total sum of all transfer fees.
+avg_val: Average market value across transfer records.
+max_val: Maximum market value recorded.
+
+🏟️ Club Performance
+win_rate: Average win rate of the club.
+goals_scored: Average goals scored by the club per game.
+goals_conceded: Average goals conceded by the club per game.
+
+🧩 Positional Flags
+is_forward: True if the player is a forward (CF, LW, RW, ST).
+is_midfielder: True if the player is a midfielder (CM, CAM, CDM, LM, RM).
+is_defender: True if the player is a defender (CB, LB, RB, WB).
+is_goalkeeper: True if the player is a goalkeeper (GK).
+
+🏢 Club-Level Contextual Features
+squad_size: Number of players in the club's squad.
+average_age: Average age of players in the club.
+foreigners_percentage: Percentage of foreign players in the club.
+national_team_players: Number of players in the club who play for national teams.
+total_market_value_club: Total market value of the club.
 
 ## Preprocessing Pipeline: 
 
