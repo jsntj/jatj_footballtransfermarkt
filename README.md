@@ -35,10 +35,13 @@ Goals scored seems to be also indicator of market value but for attacked
 # Approaches
 Based on the Eda and our level of knowledge of datascience and knowledge in football we decided to go as
 fundamental as possible. Hence, we focused on these aspect while building :
-- Try avoid any compromiesed dataset for modelling - for e.g. data leakeage due to features building or players' outliers
+- Try avoid any compromiesed dataset for modelling - for e.g. data leakeage due to features building or players' outliers --> I did that by creating a test/train set initally and built the features after the training set was created. 
 - Generate different models and Use same features - and observed their valuable features (except DNN). 
 - Generate model that is as accurate as possible with as little as over/underfitting
 - Get : different techniques to improved the model. RandomSearch.
+
+
+
 
 ## Data Loading and Preparation: 
 To ensure everyone that approaches the notebook- we stored the dataset from kaggle in personal google drive folder and load them directly into the colab notebook. This process could be replaced with any loading process.
